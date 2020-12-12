@@ -1,0 +1,12 @@
+C:\Users\Pavlina\source\repos\Pexeso\bin\Debug\Pexeso.exe.config
+C:\Users\Pavlina\source\repos\Pexeso\bin\Debug\Pexeso.exe
+C:\Users\Pavlina\source\repos\Pexeso\bin\Debug\Pexeso.pdb
+C:\Users\Pavlina\source\repos\Pexeso\obj\Debug\Pexeso.csprojAssemblyReference.cache
+C:\Users\Pavlina\source\repos\Pexeso\obj\Debug\Pexeso.Form1.resources
+C:\Users\Pavlina\source\repos\Pexeso\obj\Debug\Pexeso.Properties.Resources.resources
+C:\Users\Pavlina\source\repos\Pexeso\obj\Debug\Pexeso.csproj.GenerateResource.cache
+C:\Users\Pavlina\source\repos\Pexeso\obj\Debug\Pexeso.csproj.CoreCompileInputs.cache
+C:\Users\Pavlina\source\repos\Pexeso\obj\Debug\Pexeso.exe
+C:\Users\Pavlina\source\repos\Pexeso\obj\Debug\Pexeso.pdb
+C:\Users\Pavlina\source\repos\Pexeso\obj\Debug\Pexeso.Game.resources
+C:\Users\Pavlina\source\repos\Pexeso\obj\Debug\Pexeso.ScoreBoard.resources
