@@ -10,3 +10,15 @@ C:\Users\Pavlina\source\repos\Pexeso\obj\Debug\Pexeso.exe
 C:\Users\Pavlina\source\repos\Pexeso\obj\Debug\Pexeso.pdb
 C:\Users\Pavlina\source\repos\Pexeso\obj\Debug\Pexeso.Game.resources
 C:\Users\Pavlina\source\repos\Pexeso\obj\Debug\Pexeso.ScoreBoard.resources
+D:\skola\Pexeso_KTWS\Pexeso\bin\Debug\Pexeso.exe.config
+D:\skola\Pexeso_KTWS\Pexeso\bin\Debug\Pexeso.exe
+D:\skola\Pexeso_KTWS\Pexeso\bin\Debug\Pexeso.pdb
+D:\skola\Pexeso_KTWS\Pexeso\obj\Debug\Pexeso.csprojAssemblyReference.cache
+D:\skola\Pexeso_KTWS\Pexeso\obj\Debug\Pexeso.Form1.resources
+D:\skola\Pexeso_KTWS\Pexeso\obj\Debug\Pexeso.Game.resources
+D:\skola\Pexeso_KTWS\Pexeso\obj\Debug\Pexeso.Properties.Resources.resources
+D:\skola\Pexeso_KTWS\Pexeso\obj\Debug\Pexeso.ScoreBoard.resources
+D:\skola\Pexeso_KTWS\Pexeso\obj\Debug\Pexeso.csproj.GenerateResource.cache
+D:\skola\Pexeso_KTWS\Pexeso\obj\Debug\Pexeso.csproj.CoreCompileInputs.cache
+D:\skola\Pexeso_KTWS\Pexeso\obj\Debug\Pexeso.exe
+D:\skola\Pexeso_KTWS\Pexeso\obj\Debug\Pexeso.pdb

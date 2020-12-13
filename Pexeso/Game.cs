@@ -14,21 +14,20 @@ namespace Pexeso
     {
         Label clickedFirst = null;
         Label clickedSecond = null;
-
-
+        
+        
         public Game()
         {
             InitializeComponent();
             AssignNumbersToSquares();
         }
 
-
-        Random random = new Random();
+        int guessed = 0;
+        Random r = new Random();
         List<string> icons = new List<string>()
         {
             "1","1","2","2","3","3","4","4","5","5","6","6","7","7","8","8","9","9","10","10"
         };
-
 
         private void AssignNumbersToSquares()
         {
@@ -37,7 +36,7 @@ namespace Pexeso
                 Label iconLabel = control as Label;
                 if (iconLabel != null)
                 {
-                    int randomNumber = random.Next(icons.Count);
+                    int randomNumber = r.Next(icons.Count);
                     iconLabel.Text = icons[randomNumber];
                     icons.RemoveAt(randomNumber);
                 }
@@ -55,6 +54,9 @@ namespace Pexeso
 
             if (clickedLabel != null)
             {
+                if (clickedLabel.ForeColor != clickedLabel.BackColor)
+                    return;
+
                 if (clickedFirst == null)
                 {
                     clickedFirst = clickedLabel;
@@ -65,12 +67,19 @@ namespace Pexeso
                 {
                     clickedSecond = clickedLabel;
                     clickedSecond.ForeColor = Color.Black;
-                    timer1.Start();
-                    return;
-                }
-                if (clickedFirst.Text == clickedSecond.Text)
-                {
+                    if (clickedFirst.Text == clickedSecond.Text)
+                    {
+                        clickedFirst = null;
+                        clickedSecond = null;
+                        guessed++;
+                        if (guessed == 10)
+                        {
+                            MessageBox.Show("vyhra");
+                        }
 
+                        return;
+                    }
+                    timer1.Start();
                 }
             }
 
