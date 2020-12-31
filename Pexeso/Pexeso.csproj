@@ -97,5 +97,17 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="kocky\kocka1.jpg" />
+    <Content Include="kocky\kocka10.jpg" />
+    <Content Include="kocky\kocka2.jpg" />
+    <Content Include="kocky\kocka3.jpg" />
+    <Content Include="kocky\kocka4.jpg" />
+    <Content Include="kocky\kocka5.jpg" />
+    <Content Include="kocky\kocka6.jpg" />
+    <Content Include="kocky\kocka7.jpg" />
+    <Content Include="kocky\kocka8.jpg" />
+    <Content Include="kocky\kocka9.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

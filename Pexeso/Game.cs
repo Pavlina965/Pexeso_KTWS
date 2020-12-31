@@ -17,12 +17,16 @@ namespace Pexeso
         Label clickedFirst = null;
         Label clickedSecond = null;
         Stopwatch stopWach = new Stopwatch();
-        
+
         
         public Game()
         {
+
             InitializeComponent();
             AssignNumbersToSquares();// tato funkce přidá náhodně čísla do labelu pro rozhozeni hraci plochy
+
+
+
             stopWach.Start();
         }
 
@@ -32,9 +36,10 @@ namespace Pexeso
         {
             "1","1","2","2","3","3","4","4","5","5","6","6","7","7","8","8","9","9","10","10"
         };
-
         private void AssignNumbersToSquares()
         {
+            Image cat1 = Image.FromFile("D:/skola/KTSW_P/Pexeso/kocky/kocka1.jpg");
+            
             foreach (Control control in tableLayoutPanel1.Controls)
             {
                 Label iconLabel = control as Label;
@@ -44,10 +49,20 @@ namespace Pexeso
                     iconLabel.Text = icons[randomNumber];
                     icons.RemoveAt(randomNumber);
                 }
+                switch (iconLabel.Text)
+                {
+                    case "1":
+                       
+                        iconLabel.Image = cat1;
+                       
+                    break;
+                }
                 iconLabel.ForeColor = iconLabel.BackColor;
+                //iconLabel.Image = null;
             }
 
         }
+
 
         private void label_click(object sender, EventArgs e)
         {
