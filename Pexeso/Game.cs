@@ -100,7 +100,7 @@ namespace Pexeso
                 }
                
                 iconLabel.ForeColor = iconLabel.BackColor;
-                //iconLabel.Image = null;
+               
             }
 
         }
@@ -117,7 +117,7 @@ namespace Pexeso
                 return;
 
             Label clickedLabel = sender as Label;
-            
+            clickedLabel.Font= new Font("Arial Rounded MT", 1);
             if (clickedLabel != null)
             {
                 if (clickedLabel.Image != null)//ošetření aby nedošlo ke zvolení již zvoleného pole
@@ -127,6 +127,7 @@ namespace Pexeso
                 {
                     clickedFirst = clickedLabel;
                     clickedFirst.Image = ShowImage(clickedLabel);
+                    
                     return;
                 }
                 if (clickedFirst!= null & clickedSecond == null)//výběr druhého políčka
