@@ -14,6 +14,7 @@ namespace Pexeso
     {
         public Form1()
         {
+            
             InitializeComponent();
         }
 
@@ -34,7 +35,7 @@ namespace Pexeso
 
         private void Exit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Environment.Exit(0);
         }
     }
 }

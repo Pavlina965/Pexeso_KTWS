@@ -17,35 +17,40 @@ namespace Pexeso
         Label clickedFirst = null;
         Label clickedSecond = null;
         Stopwatch stopWach = new Stopwatch();
-
+        public static string duration;
 
         public Game()
         {
 
             InitializeComponent();
+
             AssignNumbersToSquares();// tato funkce přidá náhodně čísla do labelu pro rozhozeni hraci plochy
 
 
 
             stopWach.Start();
+
         }
 
         int guessed = 0; //pomoc při počítání správně vybraných dvojic
+        public static int kliky = 0;
         Random r = new Random();
         List<string> icons = new List<string>()
         {
             "1","1","2","2","3","3","4","4","5","5","6","6","7","7","8","8","9","9","10","10"
         };
-        Image cat1 = Image.FromFile("D:/skola/KTSW_P/Pexeso/kocky/kocka1.jpg");
-        Image cat2 = Image.FromFile("D:/skola/KTSW_P/Pexeso/kocky/kocka2.jpg");
-        Image cat3 = Image.FromFile("D:/skola/KTSW_P/Pexeso/kocky/kocka3.jpg");
-        Image cat4 = Image.FromFile("D:/skola/KTSW_P/Pexeso/kocky/kocka4.jpg");
-        Image cat5 = Image.FromFile("D:/skola/KTSW_P/Pexeso/kocky/kocka5.jpg");
-        Image cat6 = Image.FromFile("D:/skola/KTSW_P/Pexeso/kocky/kocka6.jpg");
-        Image cat7 = Image.FromFile("D:/skola/KTSW_P/Pexeso/kocky/kocka7.jpg");
-        Image cat8 = Image.FromFile("D:/skola/KTSW_P/Pexeso/kocky/kocka8.jpg");
-        Image cat9 = Image.FromFile("D:/skola/KTSW_P/Pexeso/kocky/kocka9.jpg");
-        Image cat10 = Image.FromFile("D:/skola/KTSW_P/Pexeso/kocky/kocka10.jpg");
+        private static string cesta = AppDomain.CurrentDomain.BaseDirectory + "\\..\\..\\kocky\\";
+        Image cat1 = Image.FromFile(cesta + "/kocka1.jpg");
+        Image cat2 = Image.FromFile(cesta + "kocka2.jpg");
+        Image cat3 = Image.FromFile(cesta + "kocka3.jpg");
+        Image cat4 = Image.FromFile(cesta + "kocka4.jpg");
+        Image cat5 = Image.FromFile(cesta + "kocka5.jpg");
+        Image cat6 = Image.FromFile(cesta + "kocka6.jpg");
+        Image cat7 = Image.FromFile(cesta + "kocka7.jpg");
+        Image cat8 = Image.FromFile(cesta + "kocka8.jpg");
+        Image cat9 = Image.FromFile(cesta + "kocka9.jpg");
+        Image cat10 = Image.FromFile(cesta + "kocka10.jpg");
+        
         private Image ShowImage(Label iconLabel)
         {
             switch (iconLabel.Text)
@@ -108,7 +113,7 @@ namespace Pexeso
 
 
         
-        private void label_click(object sender, EventArgs e)
+        public void label_click(object sender, EventArgs e)
         {
 
             TimeSpan ts = stopWach.Elapsed;
@@ -117,8 +122,8 @@ namespace Pexeso
                 return;
 
             Label clickedLabel = sender as Label;
-            clickedLabel.Font= new Font("Arial Rounded MT", 1);
-            if (clickedLabel != null)
+            
+            if (true)
             {
                 if (clickedLabel.Image != null)//ošetření aby nedošlo ke zvolení již zvoleného pole
                     return;
@@ -127,13 +132,14 @@ namespace Pexeso
                 {
                     clickedFirst = clickedLabel;
                     clickedFirst.Image = ShowImage(clickedLabel);
-                    
+                    kliky++;
                     return;
                 }
                 if (clickedFirst!= null & clickedSecond == null)//výběr druhého políčka
                 {
                     clickedSecond = clickedLabel;
                     clickedSecond.Image = ShowImage(clickedLabel);
+                    kliky++;
                     if (clickedFirst.Text == clickedSecond.Text)//ověření zda byly vybrany stejné "obrázky"
                     {
                         clickedFirst = null;
@@ -143,10 +149,13 @@ namespace Pexeso
                         {
                             stopWach.Stop();
                            
-                            string duration = String.Format("{0:00}:{1:00}.{2:00}",
+                            duration = String.Format("{0:00}:{1:00}.{2:00}",
             ts.Minutes, ts.Seconds,
             ts.Milliseconds / 10);
-                            MessageBox.Show("vyhra" + " vaše hra trvala "+ duration);                     }
+                            var PopUp = new PopUp();
+                            PopUp.Show();
+                            this.Close();
+                        }
 
                         return;
                     }

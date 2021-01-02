@@ -35,6 +35,7 @@
             // 
             // NewGame
             // 
+            this.NewGame.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.NewGame.Location = new System.Drawing.Point(283, 81);
             this.NewGame.Name = "NewGame";
             this.NewGame.Size = new System.Drawing.Size(213, 50);
@@ -45,6 +46,9 @@
             // 
             // Score
             // 
+            this.Score.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Score.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Score.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.Score.Location = new System.Drawing.Point(283, 173);
             this.Score.Name = "Score";
             this.Score.Size = new System.Drawing.Size(213, 50);
@@ -55,6 +59,7 @@
             // 
             // Exit
             // 
+            this.Exit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Exit.Location = new System.Drawing.Point(283, 258);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(213, 50);

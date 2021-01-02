@@ -18,5 +18,20 @@ namespace Pexeso
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
+        public static ScoreDatabase Database;
+
+        public static ScoreDatabase ScoreDatabase
+        {
+            get
+            {
+                if (Database == null)
+                {
+                    var fileHelper = new FileHelper();
+                    Database = new ScoreDatabase(fileHelper.GetLocalFilePath("database.db3"));
+                }
+                return Database;
+            }
+        }
     }
+
 }
