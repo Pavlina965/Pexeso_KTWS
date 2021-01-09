@@ -20,6 +20,7 @@ namespace Pexeso
 
         private void NewGame_Click_1(object sender, EventArgs e)
         {
+            
             var newGame = new Game();
             newGame.Show();
             this.Hide();
@@ -28,6 +29,7 @@ namespace Pexeso
 
         private void Score_Click(object sender, EventArgs e)
         {
+            
             var scoreBoard = new ScoreBoard();
             scoreBoard.Show();
             this.Hide();

@@ -15,7 +15,6 @@ namespace Pexeso
         public PopUp()
         {
             InitializeComponent();
-            this.JmenoHrace.Hide();
             this.TimeLabel.Text = ("vaše hra trvala: " + Game.duration +" počet kliků "+ Game.kliky); 
         }
 
@@ -27,32 +26,28 @@ namespace Pexeso
         public void BackButton_Click(object sender, EventArgs e)
         {
             
-            var Game = new Game();
-            Game.Close();
+            var hra = new Game();
+            hra.Close();
             this.Close();
             var Form1 = new Form1();
             Form1.Show();
-            
+
         }
 
-        private void SaveScoreButton_Click(object sender, EventArgs e)
+        private void SaveScoreButton_Click(object sender, EventArgs e)//ukladaní,casu hry, poctu kliku a jmena do databaze
         {
-           this.JmenoHrace.Show();
-            
-            
 
-           
-        }
-
-        private void OK_Click(object sender, EventArgs e)
-        {
             string jmeno = JmenoHrace.Text;
             Score score = new Score();
             score.Jmeno = jmeno;
             score.Cas = Game.duration;
             score.PocetKliku = Game.kliky;
             Program.ScoreDatabase.SaveItemAsync(score);
-
+            var hra = new Game();
+            hra.Close();
+            this.Close();
+            var ScoreBoard = new ScoreBoard();
+            ScoreBoard.Show();
         }
     }
 }

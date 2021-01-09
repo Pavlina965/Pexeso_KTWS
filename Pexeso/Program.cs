@@ -17,7 +17,9 @@ namespace Pexeso
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
         }
+
         public static ScoreDatabase Database;
 
         public static ScoreDatabase ScoreDatabase

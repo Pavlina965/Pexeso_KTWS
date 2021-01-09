@@ -18,15 +18,12 @@ namespace Pexeso
         Label clickedSecond = null;
         Stopwatch stopWach = new Stopwatch();
         public static string duration;
-
         public Game()
         {
 
             InitializeComponent();
 
             AssignNumbersToSquares();// tato funkce přidá náhodně čísla do labelu pro rozhozeni hraci plochy
-
-
 
             stopWach.Start();
 
@@ -39,7 +36,7 @@ namespace Pexeso
         {
             "1","1","2","2","3","3","4","4","5","5","6","6","7","7","8","8","9","9","10","10"
         };
-        private static string cesta = AppDomain.CurrentDomain.BaseDirectory + "\\..\\..\\kocky\\";
+        private static string cesta = AppDomain.CurrentDomain.BaseDirectory + "\\..\\..\\kocky\\"; //cesta k souboru s obrazky
         Image cat1 = Image.FromFile(cesta + "/kocka1.jpg");
         Image cat2 = Image.FromFile(cesta + "kocka2.jpg");
         Image cat3 = Image.FromFile(cesta + "kocka3.jpg");
@@ -51,7 +48,7 @@ namespace Pexeso
         Image cat9 = Image.FromFile(cesta + "kocka9.jpg");
         Image cat10 = Image.FromFile(cesta + "kocka10.jpg");
         
-        private Image ShowImage(Label iconLabel)
+        private Image ShowImage(Label iconLabel) //prirazeni obrazku k cislu
         {
             switch (iconLabel.Text)
             {
@@ -90,7 +87,7 @@ namespace Pexeso
             }
             return iconLabel.Image;
         }
-        private void AssignNumbersToSquares()
+        private void AssignNumbersToSquares() // funkce pro nahodne rozhozeni cisel
         {
            
  
@@ -110,9 +107,6 @@ namespace Pexeso
 
         }
 
-
-
-        
         public void label_click(object sender, EventArgs e)
         {
 
@@ -145,7 +139,7 @@ namespace Pexeso
                         clickedFirst = null;
                         clickedSecond = null;
                         guessed++;
-                        if (guessed == 10)
+                        if (guessed == 10) //pocitani spravne vybranych obrazku
                         {
                             stopWach.Stop();
                            
@@ -154,7 +148,6 @@ namespace Pexeso
             ts.Milliseconds / 10);
                             var PopUp = new PopUp();
                             PopUp.Show();
-                            this.Close();
                         }
 
                         return;
@@ -165,7 +158,7 @@ namespace Pexeso
             }
 
         }
-        private static Image resizeImage(Image imgToResize, Size size)
+        private static Image resizeImage(Image imgToResize, Size size)//zmenseni obrazku do velikosti labelu
         {
             return (Image)(new Bitmap(imgToResize, size));
         }

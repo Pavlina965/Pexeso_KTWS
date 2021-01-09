@@ -38,10 +38,6 @@ namespace Pexeso
             return Database.QueryAsync<Score>("SELECT * FROM [Score] LIMIT 1").Result.Count;
         }
 
-        public Task<List<Score>> QueryGetByFilter(string filter, string value)
-        {
-            return Database.QueryAsync<Score>("SELECT * FROM [Score] WHERE [" + filter.ToUpper() + "] like ?", "%" + value + "%");
-        }
     }
 }
 

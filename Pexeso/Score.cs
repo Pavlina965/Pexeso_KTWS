@@ -15,6 +15,5 @@ namespace Pexeso
         public int PocetKliku { get; set; }
         public string Cas { get; set; }
 
-
     }
 }

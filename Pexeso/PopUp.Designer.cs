@@ -33,7 +33,6 @@
             this.ExitButton = new System.Windows.Forms.Button();
             this.TimeLabel = new System.Windows.Forms.Label();
             this.JmenoHrace = new System.Windows.Forms.TextBox();
-            this.OK = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BackButton
@@ -79,28 +78,18 @@
             // 
             // JmenoHrace
             // 
+            this.JmenoHrace.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.JmenoHrace.Location = new System.Drawing.Point(194, 67);
             this.JmenoHrace.Name = "JmenoHrace";
             this.JmenoHrace.Size = new System.Drawing.Size(100, 22);
             this.JmenoHrace.TabIndex = 4;
-            this.JmenoHrace.Text = "vaše jméno";
-            // 
-            // OK
-            // 
-            this.OK.Location = new System.Drawing.Point(301, 67);
-            this.OK.Name = "OK";
-            this.OK.Size = new System.Drawing.Size(36, 22);
-            this.OK.TabIndex = 5;
-            this.OK.Text = "OK";
-            this.OK.UseVisualStyleBackColor = true;
-            this.OK.Click += new System.EventHandler(this.OK_Click);
+            this.JmenoHrace.Text = "ABC";
             // 
             // PopUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(486, 183);
-            this.Controls.Add(this.OK);
             this.Controls.Add(this.JmenoHrace);
             this.Controls.Add(this.TimeLabel);
             this.Controls.Add(this.ExitButton);
@@ -120,6 +109,5 @@
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Label TimeLabel;
         private System.Windows.Forms.TextBox JmenoHrace;
-        private System.Windows.Forms.Button OK;
     }
 }

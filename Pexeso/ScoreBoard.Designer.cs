@@ -82,6 +82,7 @@
             // 
             // dataGridScore
             // 
+            this.dataGridScore.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridScore.HideSelection = false;
             this.dataGridScore.Location = new System.Drawing.Point(186, 72);
             this.dataGridScore.Name = "dataGridScore";
